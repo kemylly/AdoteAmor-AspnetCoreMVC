@@ -1,0 +1,16 @@
+@model IEnumerable<treino_mvc2.Models.Animais>  //tipo do objeto Model animal
+
+<h2>Todos os animais para adoção</h2>
+<a href="/Animal/Cadastrar" class="btn btn-warning">Novo animal</a>
+<hr>
+@foreach (var animais in Model) // @model
+{
+    <p>Nome: @animais.Nome</p>
+    <p>Raca: @animais.Raca</p>
+    <p>Idade: @animais.Idade</p>
+    <p>Telefone: @animais.Telefone</p>
+    <p>Comentario: @animais.Comentario</p>
+    <a href="/Animal/Editar/@animais.Id" class="btn btn-success">Editar</a>
+    <a href="/Animal/Deletar/@animais.Id" class="btn btn-danger">Deletar</a>
+    <hr>
+}

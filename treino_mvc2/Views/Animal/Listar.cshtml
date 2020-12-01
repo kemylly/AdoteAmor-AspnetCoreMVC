@@ -1,0 +1,45 @@
+@model IEnumerable<treino_mvc2.Models.Animais>  //tipo do objeto Model
+
+<div class="container-sm">
+<img src="~/img/adotar.png" alt="Banner de doacao" width="100%">
+<br/>
+<br/>
+    <h2> Todos os animais para adoção</h2>
+    <hr/>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <a href="/Animal/Cadastrar" class="btn btn-warning btn-block">Novo animal</a>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Animal/ListarEditar" class="btn btn-dark btn-block">Sou Veterinario</a>
+        </div>
+    </div>
+
+<hr>
+
+<div class="row">
+@foreach (var animais in Model) // @model
+{
+<div class="col-sm-4">
+    <div class="card" style="width: 22rem;">
+        <img src="~/img/gatodesenho.jpg" class="card-img-top" alt="animal">
+        <div class="card-body">
+            <h5 class="card-title">@animais.Nome</h5>
+            
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Raca: @animais.Raca</li>
+            <li class="list-group-item">Idade: @animais.Idade</li>
+            <li class="list-group-item">Telefone: @animais.Telefone</li>
+        </ul>
+        <div class="card-body">
+           
+            <p class="card-text">Comentario: @animais.Comentario</p>
+        </div>
+    </div>
+    <br/>
+</div>
+}
+</div>
+</div>

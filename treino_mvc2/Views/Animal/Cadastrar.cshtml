@@ -1,0 +1,21 @@
+@model treino_mvc2.Models.Animais
+
+<div>
+    <div class="text-center"> 
+        
+        <img src="~/img/cadastre.png" alt="Banner Adote Amor" width="100%">
+        <br>
+        <h2>Cadastro de Animais</h2>
+        <hr>
+        <form class="form-horizontal" asp-controller="Animal" asp-action="Salvar" method="POST">
+            <input type="hidden" asp-for="Id">
+            <input type="text" class="form-control" asp-for="Nome" placeholder="Nome"> <br/>
+            <input type="text" class="form-control" asp-for="Raca" placeholder="Raca"> <br/>
+            <input type="number" class="form-control" asp-for="Idade" placeholder="Idade"> <br/>
+            <input type="text" class="form-control" asp-for="Telefone" placeholder="Telefone"> <br/>
+            <input type="text" class="form-control" asp-for="Comentario" placeholder="Comentario"> <br/>
+            <button class="btn btn-outline-warning">Cadastrar</button>
+        </form>
+        
+    </div>
+</div>
